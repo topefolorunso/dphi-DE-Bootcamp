@@ -1,0 +1,5 @@
+*.csv
+*.parquet
+*.pdf
+docker/ny_taxi_postgres_data
+*.init
