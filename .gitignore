@@ -1,5 +1,6 @@
 *.csv
 *.parquet
 *.pdf
-docker/ny_taxi_postgres_data
+week_1/docker_postgres/ny_taxi_postgres_data
 *.init
+week_1/gcp/dphi-de-bc-public.json
