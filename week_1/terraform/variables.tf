@@ -9,12 +9,12 @@ variable "project" {
 
 variable "credentials" {
   description = "Your Project Credentials"
-  default = "C:/Users/HP/Desktop/PROJECT xED/Data/Projects/DE/dphi/week_1/gcp/dphi-de-bc-public.json"
+  default = "~/.google/credentials/google_credentials.json"
 }
 
 variable "region" {
   description = "Region for GCP resources. Choose as per your location: https://cloud.google.com/about/locations"
-  default = "europe-west6"
+  default = "europe-west1"
   type = string
 }
 
