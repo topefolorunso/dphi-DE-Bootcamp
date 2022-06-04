@@ -1,3 +1,4 @@
+*.ipynb
 *.csv
 *.parquet
 *.pdf
@@ -5,3 +6,4 @@ week_1/docker_postgres/ny_taxi_postgres_data
 *.init
 week_1/gcp/dphi-de-bc-public.json
 google_credentials.json
+week_2/airflow/logs
