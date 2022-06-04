@@ -1,0 +1,27 @@
+[2022-06-01 10:15:47,990] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: PostgresIngestionDAG.ingest manual__2022-06-01T10:15:06.595067+00:00 [queued]>
+[2022-06-01 10:15:50,023] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: PostgresIngestionDAG.ingest manual__2022-06-01T10:15:06.595067+00:00 [queued]>
+[2022-06-01 10:15:50,089] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-01 10:15:50,094] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-06-01 10:15:50,136] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-01 10:15:51,413] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): ingest> on 2022-06-01 10:15:06.595067+00:00
+[2022-06-01 10:15:52,078] {standard_task_runner.py:52} INFO - Started process 722 to run task
+[2022-06-01 10:15:52,773] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'PostgresIngestionDAG', 'ingest', 'manual__2022-06-01T10:15:06.595067+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_postgres.py', '--cfg-path', '/tmp/tmpua0cloyn', '--error-file', '/tmp/tmptjkog87i']
+[2022-06-01 10:15:52,838] {standard_task_runner.py:77} INFO - Job 22: Subtask ingest
+[2022-06-01 10:15:55,612] {logging_mixin.py:109} INFO - Running <TaskInstance: PostgresIngestionDAG.ingest manual__2022-06-01T10:15:06.595067+00:00 [running]> on host 5b72bd51239c
+[2022-06-01 10:16:01,302] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=PostgresIngestionDAG
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-01T10:15:06.595067+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-01T10:15:06.595067+00:00
+[2022-06-01 10:16:01,326] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-01 10:16:01,410] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'pwd']
+[2022-06-01 10:16:02,053] {subprocess.py:85} INFO - Output:
+[2022-06-01 10:16:02,104] {subprocess.py:89} INFO - /tmp/***tmpv2n8ok0x
+[2022-06-01 10:16:02,257] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-06-01 10:16:04,894] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=PostgresIngestionDAG, task_id=ingest, execution_date=20220601T101506, start_date=20220601T101547, end_date=20220601T101604
+[2022-06-01 10:16:07,778] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-01 10:16:11,140] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
