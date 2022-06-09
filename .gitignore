@@ -8,3 +8,6 @@ week_1/gcp/dphi-de-bc-public.json
 week_2/airflow/logs
 google_credentials.json
 week_3/airflow/logs
+*.json
+week_1/docker_postgres/ny_taxi_postgres_data
+week_2/airflow/logs
