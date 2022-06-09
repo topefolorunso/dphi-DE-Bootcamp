@@ -1,7 +1,8 @@
+*.ipynb
 *.csv
 *.parquet
 *.pdf
 *.init
 *.json
 week_1/docker_postgres/ny_taxi_postgres_data
-week_2/airflow/logs/scheduler/latest
+week_2/airflow/logs

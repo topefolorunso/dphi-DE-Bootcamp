@@ -9,8 +9,8 @@ RUN apt-get update -qq && apt-get install vim -qqq
 # git gcc g++ -qqq
 
 COPY requirements.txt .
-RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
+
 
 # Ref: https://airflow.apache.org/docs/docker-stack/recipes.html
 
@@ -34,9 +34,12 @@ RUN DOWNLOAD_URL="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/goo
     && rm -rf "${TMP_DIR}" \
     && gcloud --version
 
-WORKDIR $AIRFLOW_HOME
 
-COPY scripts scripts
-RUN chmod +x scripts
+
+COPY google_credentials.json $AIRFLOW_HOME/google_credentials.json
+ENV GOOGLE_APPLICATION_CREDENTIALS="${AIRFLOW_HOME}/google_credentials.json"
+ENV AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT="google-cloud-platform://?extra__google_cloud_platform__key_path=${AIRFLOW_HOME}/google_credentials.json"
+
+WORKDIR $AIRFLOW_HOME
 
 USER $AIRFLOW_UID
